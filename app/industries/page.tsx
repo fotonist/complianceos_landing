@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -190,13 +191,13 @@ export default function IndustriesPage() {
               organization.
             </p>
 
-            <a
+            <Link
               href="/demo"
               className="mt-10 inline-flex items-center rounded-full bg-blue-600 px-8 py-4 text-sm font-semibold text-white shadow-lg transition hover:bg-blue-700"
             >
               Request Demo
               <span className="ml-3 text-lg">→</span>
-            </a>
+            </Link>
           </div>
         </section>
       </main>

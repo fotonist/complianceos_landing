@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -235,7 +236,7 @@ export default function PricingPage() {
                   ))}
                 </ul>
 
-                <a
+                <Link
                   href="/demo"
                   className={`mt-10 flex w-full items-center justify-center rounded-full px-6 py-4 text-sm font-semibold transition ${
                     plan.featured
@@ -247,7 +248,7 @@ export default function PricingPage() {
                     ? "Talk to Sales"
                     : "Request a Demo"}
                   <span className="ml-2">→</span>
-                </a>
+                </Link>
               </article>
             ))}
           </div>
@@ -382,12 +383,12 @@ export default function PricingPage() {
               requirements.
             </p>
 
-            <a
+            <Link
               href="/demo"
               className="mt-9 inline-flex rounded-full bg-white px-8 py-4 text-sm font-semibold text-blue-700 transition hover:bg-blue-50"
             >
               Request a Demo →
-            </a>
+            </Link>
           </div>
         </section>
       </main>

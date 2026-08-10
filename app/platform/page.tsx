@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -150,13 +151,13 @@ export default function PlatformPage() {
                   <span className="ml-3">→</span>
                 </a>
 
-                <a
+                <Link
                   href="/demo"
                   className="inline-flex items-center rounded-full border border-slate-300 bg-white px-7 py-4 text-sm font-semibold text-slate-900 transition hover:border-slate-400 hover:bg-slate-50"
                 >
                   Request a Demo
                   <span className="ml-3">→</span>
-                </a>
+                </Link>
               </div>
             </div>
 
@@ -187,16 +188,12 @@ export default function PlatformPage() {
                   <div className="mt-6 grid grid-cols-2 gap-3">
                     <div className="rounded-xl border border-slate-800 bg-slate-900 p-4">
                       <p className="text-xs text-slate-400">Linked Risks</p>
-                      <p className="mt-2 text-2xl font-bold text-white">
-                        11
-                      </p>
+                      <p className="mt-2 text-2xl font-bold text-white">11</p>
                     </div>
 
                     <div className="rounded-xl border border-slate-800 bg-slate-900 p-4">
                       <p className="text-xs text-slate-400">Critical Risks</p>
-                      <p className="mt-2 text-2xl font-bold text-red-400">
-                        2
-                      </p>
+                      <p className="mt-2 text-2xl font-bold text-red-400">2</p>
                     </div>
 
                     <div className="rounded-xl border border-slate-800 bg-slate-900 p-4">
@@ -208,9 +205,7 @@ export default function PlatformPage() {
 
                     <div className="rounded-xl border border-slate-800 bg-slate-900 p-4">
                       <p className="text-xs text-slate-400">Evidence</p>
-                      <p className="mt-2 text-2xl font-bold text-white">
-                        30
-                      </p>
+                      <p className="mt-2 text-2xl font-bold text-white">30</p>
                     </div>
                   </div>
 
@@ -232,7 +227,7 @@ export default function PlatformPage() {
                             className="flex-1 rounded-t bg-blue-500/70"
                             style={{ height: `${height}%` }}
                           />
-                        )
+                        ),
                       )}
                     </div>
                   </div>
@@ -275,9 +270,7 @@ export default function PlatformPage() {
                     <span className="h-2 w-2 rounded-full bg-blue-600" />
                   </div>
 
-                  <h3 className="mt-7 text-2xl font-bold">
-                    {layer.title}
-                  </h3>
+                  <h3 className="mt-7 text-2xl font-bold">{layer.title}</h3>
 
                   <p className="mt-4 min-h-[80px] text-sm leading-6 text-slate-600">
                     {layer.description}
@@ -341,7 +334,7 @@ export default function PlatformPage() {
                           </span>
                         )}
                       </div>
-                    )
+                    ),
                   )}
                 </div>
 
@@ -356,9 +349,7 @@ export default function PlatformPage() {
                       className="rounded-2xl border border-slate-700 bg-slate-950 p-5"
                     >
                       <p className="text-xs text-slate-500">{left}</p>
-                      <p className="mt-2 font-semibold text-white">
-                        {right}
-                      </p>
+                      <p className="mt-2 font-semibold text-white">{right}</p>
                     </div>
                   ))}
                 </div>
@@ -396,9 +387,7 @@ export default function PlatformPage() {
                     {module.label}
                   </span>
 
-                  <h3 className="mt-4 text-2xl font-bold">
-                    {module.title}
-                  </h3>
+                  <h3 className="mt-4 text-2xl font-bold">{module.title}</h3>
 
                   <p className="mt-4 leading-7 text-slate-600">
                     {module.description}
@@ -484,7 +473,7 @@ export default function PlatformPage() {
                       >
                         {item}
                       </div>
-                    )
+                    ),
                   )}
                 </div>
               </div>
@@ -544,13 +533,13 @@ export default function PlatformPage() {
                   operational priorities.
                 </p>
 
-                <a
+                <Link
                   href="/demo"
                   className="mt-8 inline-flex rounded-full bg-white px-7 py-4 text-sm font-semibold text-slate-950 transition hover:bg-slate-100"
                 >
                   See ComplianceOS in Action
                   <span className="ml-3">→</span>
-                </a>
+                </Link>
               </div>
 
               <div className="grid gap-4 sm:grid-cols-2">
@@ -563,9 +552,7 @@ export default function PlatformPage() {
                       {metric.value}
                     </span>
 
-                    <h3 className="mt-4 text-xl font-bold">
-                      {metric.title}
-                    </h3>
+                    <h3 className="mt-4 text-xl font-bold">{metric.title}</h3>
 
                     <p className="mt-3 text-sm leading-6 text-slate-400">
                       {metric.description}
@@ -629,20 +616,20 @@ export default function PlatformPage() {
             </p>
 
             <div className="mt-9 flex flex-wrap justify-center gap-4">
-              <a
+              <Link
                 href="/demo"
                 className="inline-flex rounded-full bg-blue-600 px-8 py-4 font-semibold text-white shadow-lg shadow-blue-600/20 transition hover:bg-blue-700"
               >
                 Request a Demo
                 <span className="ml-3">→</span>
-              </a>
+              </Link>
 
-              <a
+              <Link
                 href="/solutions"
                 className="inline-flex rounded-full border border-slate-300 bg-white px-8 py-4 font-semibold text-slate-900 transition hover:bg-slate-100"
               >
                 Explore Solutions
-              </a>
+              </Link>
             </div>
           </div>
         </section>

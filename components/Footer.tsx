@@ -12,9 +12,9 @@ const platform = [
 
 const resources = [
   { label: "Resources", href: "/resources" },
-  { label: "Documentation", href: "#" },
+  { label: "Documentation", href: "/documentation" },
   { label: "Blog", href: "#" },
-  { label: "Support", href: "#" },
+  { label: "Support", href: "/support" },
 ];
 
 export default function Footer() {

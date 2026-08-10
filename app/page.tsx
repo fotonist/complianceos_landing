@@ -1,3 +1,4 @@
+cat > app/page.tsx <<'EOF'
 "use client";
 
 import Navbar from "@/components/Navbar";
@@ -9,11 +10,16 @@ export default function HomePage() {
     <>
       <Navbar />
 
-     <main className="overflow-hidden">
-        <Hero />
+      <main className="overflow-hidden">
+        <Hero
+          description="Connect governance, risk, compliance, audit and evidence in one intelligent operating model."
+          subDescription="Transform compliance data into actionable intelligence for your organization."
+          supportedFrameworks="Supported frameworks"
+        />
 
         <DashboardPreview />
       </main>
     </>
   );
 }
+EOF

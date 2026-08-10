@@ -1,7 +1,6 @@
+cat > app/api/demo/route.ts <<'EOF'
 import { neon } from "@neondatabase/serverless";
 import { NextResponse } from "next/server";
-
-const sql = neon(process.env.DATABASE_URL!);
 
 type DemoRequest = {
   fullName?: string;
@@ -26,6 +25,8 @@ export async function POST(request: Request) {
         { status: 500 }
       );
     }
+
+    const sql = neon(process.env.DATABASE_URL);
 
     const body = (await request.json()) as DemoRequest;
 
@@ -123,3 +124,4 @@ export async function POST(request: Request) {
     );
   }
 }
+EOF

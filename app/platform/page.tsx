@@ -170,6 +170,7 @@ export default function PlatformPage() {
                       <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-slate-400">
                         Executive Intelligence
                       </p>
+
                       <h3 className="mt-1 text-lg font-semibold text-white">
                         Compliance Health
                       </h3>
@@ -179,6 +180,7 @@ export default function PlatformPage() {
                       <p className="text-[10px] uppercase text-slate-400">
                         Health Index
                       </p>
+
                       <p className="text-4xl font-bold text-emerald-400">
                         42.4
                       </p>
@@ -214,6 +216,7 @@ export default function PlatformPage() {
                       <span className="text-xs text-slate-400">
                         Control Health Trend
                       </span>
+
                       <span className="text-xs text-emerald-400">
                         Intelligence
                       </span>
@@ -324,6 +327,7 @@ export default function PlatformPage() {
                         <p className="text-[10px] uppercase tracking-[0.18em] text-slate-500">
                           0{index + 1}
                         </p>
+
                         <p className="mt-3 font-semibold text-white">
                           {item}
                         </p>
@@ -349,6 +353,7 @@ export default function PlatformPage() {
                       className="rounded-2xl border border-slate-700 bg-slate-950 p-5"
                     >
                       <p className="text-xs text-slate-500">{left}</p>
+
                       <p className="mt-2 font-semibold text-white">{right}</p>
                     </div>
                   ))}
@@ -395,10 +400,7 @@ export default function PlatformPage() {
 
                   <div className="mt-8 flex flex-wrap items-center gap-2">
                     {module.flow.map((item, index) => (
-                      <div
-                        key={item}
-                        className="flex items-center gap-2"
-                      >
+                      <div key={item} className="flex items-center gap-2">
                         <span className="rounded-full bg-slate-100 px-4 py-2 text-sm font-semibold text-slate-800">
                           {item}
                         </span>

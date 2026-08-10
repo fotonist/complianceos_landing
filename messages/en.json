@@ -1,0 +1,49 @@
+{
+  "nav": {
+    "platform": "Platform",
+    "solutions": "Solutions",
+    "industries": "Industries",
+    "pricing": "Pricing",
+    "resources": "Resources",
+    "documentation": "Documentation",
+    "support": "Support",
+    "requestDemo": "Request Demo"
+  },
+  "common": {
+    "learnMore": "Learn More",
+    "getStarted": "Get Started",
+    "requestDemo": "Request Demo",
+    "contactUs": "Contact Us",
+    "explore": "Explore",
+    "viewDetails": "View Details",
+    "readMore": "Read More"
+  },
+  "footer": {
+    "description": "AI-powered compliance intelligence for modern enterprises.",
+    "platform": "Platform",
+    "solutions": "Solutions",
+    "industries": "Industries",
+    "resources": "Resources",
+    "documentation": "Documentation",
+    "support": "Support",
+    "pricing": "Pricing",
+    "copyright": "© 2026 Compliance Intelligence OS Pro. All rights reserved."
+  },
+  "demo": {
+    "title": "Request a Demo",
+    "description": "See how ComplianceOS can transform your organization's compliance operations.",
+    "fullName": "Full Name",
+    "email": "Business Email",
+    "company": "Company",
+    "message": "Message",
+    "submit": "Request Demo",
+    "sending": "Sending...",
+    "success": "Your demo request has been received.",
+    "error": "Something went wrong. Please try again."
+  },
+  "hero": {
+    "description": "The AI-Powered Operating System for Governance, Risk, Compliance and Audit.",
+    "subDescription": "Transform fragmented compliance activities into a unified intelligence platform that enables executives, auditors and compliance teams to make faster, data-driven decisions.",
+    "supportedFrameworks": "Supported Frameworks"
+  }
+}

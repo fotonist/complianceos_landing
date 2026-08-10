@@ -1,0 +1,49 @@
+{
+  "nav": {
+    "platform": "Platform",
+    "solutions": "Çözümler",
+    "industries": "Sektörler",
+    "pricing": "Fiyatlandırma",
+    "resources": "Kaynaklar",
+    "documentation": "Dokümantasyon",
+    "support": "Destek",
+    "requestDemo": "Demo Talep Et"
+  },
+  "common": {
+    "learnMore": "Daha Fazla Bilgi",
+    "getStarted": "Başlayın",
+    "requestDemo": "Demo Talep Et",
+    "contactUs": "Bize Ulaşın",
+    "explore": "Keşfet",
+    "viewDetails": "Detayları Gör",
+    "readMore": "Devamını Oku"
+  },
+  "footer": {
+    "description": "Modern işletmeler için yapay zekâ destekli uyum zekâsı.",
+    "platform": "Platform",
+    "solutions": "Çözümler",
+    "industries": "Sektörler",
+    "resources": "Kaynaklar",
+    "documentation": "Dokümantasyon",
+    "support": "Destek",
+    "pricing": "Fiyatlandırma",
+    "copyright": "© 2026 Compliance Intelligence OS Pro. Tüm hakları saklıdır."
+  },
+  "demo": {
+    "title": "Demo Talep Edin",
+    "description": "ComplianceOS'un kuruluşunuzun uyum operasyonlarını nasıl dönüştürebileceğini keşfedin.",
+    "fullName": "Ad Soyad",
+    "email": "Kurumsal E-posta",
+    "company": "Şirket",
+    "message": "Mesaj",
+    "submit": "Demo Talep Et",
+    "sending": "Gönderiliyor...",
+    "success": "Demo talebiniz başarıyla alındı.",
+    "error": "Bir hata oluştu. Lütfen tekrar deneyin."
+  },
+  "hero": {
+    "description": "Yönetişim, Risk, Uyum ve Denetim için Yapay Zekâ Destekli İşletim Sistemi.",
+    "subDescription": "Dağınık uyum faaliyetlerini, yöneticilerin, denetçilerin ve uyum ekiplerinin daha hızlı ve veriye dayalı kararlar almasını sağlayan birleşik bir zekâ platformuna dönüştürün.",
+    "supportedFrameworks": "Desteklenen Standartlar ve Çerçeveler"
+  }
+}

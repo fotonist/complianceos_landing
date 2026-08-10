@@ -1,0 +1,277 @@
+@import "tailwindcss";
+
+/* ============================================================
+   COMPLIANCE INTELLIGENCE OS PRO
+   DESIGN SYSTEM
+============================================================ */
+
+:root {
+  /* Background */
+  --background: #f8fafc;
+  --surface: #ffffff;
+  --surface-secondary: #f1f5f9;
+
+  /* Text */
+  --foreground: #0f172a;
+  --foreground-secondary: #475569;
+
+  /* Brand */
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+  --accent: #7c3aed;
+
+  /* UI */
+  --border: #e2e8f0;
+
+  /* Radius */
+  --radius: 18px;
+
+  /* Shadow */
+  --shadow: 0 20px 60px rgba(15, 23, 42, 0.08);
+
+  /* Glass */
+  --navbar: rgba(255, 255, 255, 0.72);
+}
+
+/* ============================================================
+   RESET
+============================================================ */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+
+  font-family: var(--font-geist), sans-serif;
+
+  overflow-x: hidden;
+
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* ============================================================
+   GLOBAL ELEMENTS
+============================================================ */
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  background: none;
+  font: inherit;
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+section {
+  position: relative;
+}
+
+/* ============================================================
+   SELECTION
+============================================================ */
+
+::selection {
+  background: var(--primary);
+  color: white;
+}
+
+/* ============================================================
+   SCROLLBAR
+============================================================ */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* ============================================================
+   TYPOGRAPHY
+============================================================ */
+
+h1 {
+  font-size: clamp(3rem, 7vw, 4.5rem);
+  line-height: 1.02;
+  font-weight: 800;
+  letter-spacing: -2px;
+}
+
+h2 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.1;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+p {
+  color: var(--foreground-secondary);
+  line-height: 1.8;
+}
+
+/* ============================================================
+   CONTAINER
+============================================================ */
+
+.container {
+  width: min(1280px, calc(100% - 3rem));
+  margin-inline: auto;
+}
+
+/* ============================================================
+   BUTTONS
+============================================================ */
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+
+  padding: 15px 30px;
+
+  border-radius: 999px;
+
+  background: var(--primary);
+  color: white;
+
+  font-weight: 600;
+
+  transition: all 0.25s ease;
+
+  box-shadow: 0 20px 40px rgba(37, 99, 235, 0.25);
+}
+
+.btn-primary:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 15px 30px;
+
+  border-radius: 999px;
+
+  background: white;
+  color: var(--foreground);
+
+  border: 1px solid var(--border);
+
+  transition: all 0.25s ease;
+}
+
+.btn-secondary:hover {
+  background: #f8fafc;
+  transform: translateY(-2px);
+}
+
+/* ============================================================
+   CARD
+============================================================ */
+
+.card {
+  background: white;
+
+  border: 1px solid var(--border);
+
+  border-radius: 24px;
+
+  box-shadow: var(--shadow);
+}
+
+/* ============================================================
+   GLASS EFFECT
+============================================================ */
+
+.glass {
+  background: var(--navbar);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+/* ============================================================
+   HERO BACKGROUND
+============================================================ */
+
+.hero-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-bg::before {
+  content: "";
+
+  position: absolute;
+
+  width: 900px;
+  height: 900px;
+
+  left: -300px;
+  top: -300px;
+
+  background: radial-gradient(
+    circle,
+    rgba(37, 99, 235, 0.1),
+    transparent 70%
+  );
+
+  pointer-events: none;
+}
+
+.hero-bg::after {
+  content: "";
+
+  position: absolute;
+
+  width: 700px;
+  height: 700px;
+
+  right: -200px;
+  top: 100px;
+
+  background: radial-gradient(
+    circle,
+    rgba(124, 58, 237, 0.08),
+    transparent 70%
+  );
+
+  pointer-events: none;
+}

@@ -167,14 +167,14 @@ export default function SolutionsPage() {
                 className="rounded-full bg-blue-600 px-7 py-4 text-sm font-semibold text-white shadow-lg shadow-blue-600/20 transition hover:-translate-y-0.5 hover:bg-blue-700"
               >
                 Request Demo →
-              </Link>
+          </Link>
 
               <Link
                 href="/platform"
                 className="rounded-full border border-slate-300 bg-white px-7 py-4 text-sm font-semibold text-slate-900 transition hover:border-slate-400 hover:bg-slate-50"
               >
                 Explore Platform
-              </Link>
+          </Link>
             </div>
           </div>
         </section>
@@ -312,7 +312,7 @@ export default function SolutionsPage() {
                   className="mt-8 inline-flex rounded-full border border-slate-700 px-6 py-3 text-sm font-semibold text-white transition hover:border-cyan-400 hover:text-cyan-300"
                 >
                   Explore Intelligence →
-                </Link>
+          </Link>
               </div>
 
               <div className="grid gap-5 sm:grid-cols-2">
@@ -416,7 +416,7 @@ export default function SolutionsPage() {
                 className="mt-8 inline-flex rounded-full bg-white px-7 py-4 text-sm font-semibold text-blue-700 transition hover:bg-blue-50"
               >
                 Request a Demo →
-              </Link>
+          </Link>
             </div>
           </div>
         </section>

@@ -117,7 +117,6 @@ export default function PlatformPage() {
       <Navbar />
 
       <main className="bg-white text-slate-950">
-        {/* HERO */}
         <section className="relative overflow-hidden border-b border-slate-200 pt-32">
           <div className="absolute left-[-180px] top-20 h-[500px] w-[500px] rounded-full bg-blue-100/70 blur-[120px]" />
           <div className="absolute right-[-180px] top-40 h-[500px] w-[500px] rounded-full bg-indigo-100/60 blur-[120px]" />
@@ -161,7 +160,6 @@ export default function PlatformPage() {
               </div>
             </div>
 
-            {/* EXECUTIVE DASHBOARD PREVIEW */}
             <div className="relative">
               <div className="rounded-[28px] border border-slate-200 bg-white p-3 shadow-2xl shadow-slate-300/40">
                 <div className="rounded-[22px] border border-slate-200 bg-slate-950 p-5">
@@ -170,7 +168,6 @@ export default function PlatformPage() {
                       <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-slate-400">
                         Executive Intelligence
                       </p>
-
                       <h3 className="mt-1 text-lg font-semibold text-white">
                         Compliance Health
                       </h3>
@@ -180,7 +177,6 @@ export default function PlatformPage() {
                       <p className="text-[10px] uppercase text-slate-400">
                         Health Index
                       </p>
-
                       <p className="text-4xl font-bold text-emerald-400">
                         42.4
                       </p>
@@ -216,7 +212,6 @@ export default function PlatformPage() {
                       <span className="text-xs text-slate-400">
                         Control Health Trend
                       </span>
-
                       <span className="text-xs text-emerald-400">
                         Intelligence
                       </span>
@@ -240,7 +235,6 @@ export default function PlatformPage() {
           </div>
         </section>
 
-        {/* OPERATING MODEL */}
         <section id="platform" className="border-b border-slate-200 py-28">
           <div className="container mx-auto max-w-[1400px] px-6">
             <div className="max-w-3xl">
@@ -269,7 +263,6 @@ export default function PlatformPage() {
                     <span className="text-sm font-bold text-blue-600">
                       {layer.number}
                     </span>
-
                     <span className="h-2 w-2 rounded-full bg-blue-600" />
                   </div>
 
@@ -296,7 +289,6 @@ export default function PlatformPage() {
           </div>
         </section>
 
-        {/* MATRIX FLOW */}
         <section className="bg-slate-950 py-28 text-white">
           <div className="container mx-auto max-w-[1400px] px-6">
             <div className="grid gap-16 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
@@ -353,7 +345,6 @@ export default function PlatformPage() {
                       className="rounded-2xl border border-slate-700 bg-slate-950 p-5"
                     >
                       <p className="text-xs text-slate-500">{left}</p>
-
                       <p className="mt-2 font-semibold text-white">{right}</p>
                     </div>
                   ))}
@@ -363,7 +354,6 @@ export default function PlatformPage() {
           </div>
         </section>
 
-        {/* INTELLIGENCE MODULES */}
         <section className="py-28">
           <div className="container mx-auto max-w-[1400px] px-6">
             <div className="mx-auto max-w-3xl text-center">
@@ -417,7 +407,6 @@ export default function PlatformPage() {
           </div>
         </section>
 
-        {/* EVIDENCE / RISK / EXECUTION */}
         <section className="border-y border-slate-200 bg-slate-50 py-28">
           <div className="container mx-auto max-w-[1400px] px-6">
             <div className="grid gap-6 lg:grid-cols-3">
@@ -519,7 +508,6 @@ export default function PlatformPage() {
           </div>
         </section>
 
-        {/* EXECUTIVE INTELLIGENCE */}
         <section className="bg-slate-950 py-28 text-white">
           <div className="container mx-auto max-w-[1400px] px-6">
             <div className="grid gap-16 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
@@ -569,7 +557,6 @@ export default function PlatformPage() {
           </div>
         </section>
 
-        {/* AI */}
         <section className="py-28">
           <div className="container mx-auto max-w-[1200px] px-6 text-center">
             <span className="text-sm font-semibold uppercase tracking-[0.25em] text-blue-600">
@@ -608,7 +595,6 @@ export default function PlatformPage() {
           </div>
         </section>
 
-        {/* FINAL CTA */}
         <section className="border-t border-slate-200 bg-slate-50 py-24">
           <div className="container mx-auto max-w-[1100px] px-6 text-center">
             <h2 className="text-4xl font-black tracking-tight sm:text-5xl">

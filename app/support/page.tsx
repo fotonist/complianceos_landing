@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -134,12 +135,12 @@ export default function SupportPage() {
               support your organization.
             </p>
 
-            <a
+            <Link
               href="/demo"
               className="mt-8 inline-flex rounded-full bg-blue-600 px-8 py-4 font-semibold text-white transition hover:bg-blue-700"
             >
               Request Demo →
-            </a>
+            </Link>
           </div>
         </section>
       </main>

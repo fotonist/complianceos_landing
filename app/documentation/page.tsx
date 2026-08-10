@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -196,7 +197,7 @@ export default function DocumentationPage() {
                     <ul className="space-y-2">
                       {group.items.map((item, index) => (
                         <li key={`${group.title}-${item.label}`}>
-                          <a
+                          <Link
                             href={item.href}
                             className={`block text-sm leading-6 transition ${
                               group.title === "GETTING STARTED" &&
@@ -206,7 +207,7 @@ export default function DocumentationPage() {
                             }`}
                           >
                             {item.label}
-                          </a>
+                          </Link>
                         </li>
                       ))}
                     </ul>
@@ -218,7 +219,10 @@ export default function DocumentationPage() {
             {/* CONTENT */}
             <div className="max-w-5xl">
               {/* OVERVIEW */}
-              <section id="overview" className="scroll-mt-28 border-b border-slate-200 pb-12">
+              <section
+                id="overview"
+                className="scroll-mt-28 border-b border-slate-200 pb-12"
+              >
                 <p className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-600">
                   Getting Started
                 </p>
@@ -302,18 +306,18 @@ export default function DocumentationPage() {
                 </p>
 
                 <div className="mt-8 grid gap-4 md:grid-cols-3">
-                  {[
-                    "Organization Setup",
-                    "Departments",
-                    "Processes",
-                  ].map((item) => (
-                    <div
-                      key={item}
-                      className="rounded-2xl border border-slate-200 p-6"
-                    >
-                      <h4 className="font-semibold text-slate-900">{item}</h4>
-                    </div>
-                  ))}
+                  {["Organization Setup", "Departments", "Processes"].map(
+                    (item) => (
+                      <div
+                        key={item}
+                        className="rounded-2xl border border-slate-200 p-6"
+                      >
+                        <h4 className="font-semibold text-slate-900">
+                          {item}
+                        </h4>
+                      </div>
+                    ),
+                  )}
                 </div>
               </section>
 
@@ -416,22 +420,18 @@ export default function DocumentationPage() {
                 </p>
 
                 <div className="mt-8 grid gap-4 md:grid-cols-5">
-                  {[
-                    "Collect",
-                    "Review",
-                    "Approve",
-                    "Version",
-                    "Link",
-                  ].map((item) => (
-                    <div
-                      key={item}
-                      className="rounded-2xl border border-slate-200 p-5 text-center"
-                    >
-                      <span className="text-sm font-semibold text-slate-900">
-                        {item}
-                      </span>
-                    </div>
-                  ))}
+                  {["Collect", "Review", "Approve", "Version", "Link"].map(
+                    (item) => (
+                      <div
+                        key={item}
+                        className="rounded-2xl border border-slate-200 p-5 text-center"
+                      >
+                        <span className="text-sm font-semibold text-slate-900">
+                          {item}
+                        </span>
+                      </div>
+                    ),
+                  )}
                 </div>
               </section>
 
@@ -533,10 +533,7 @@ export default function DocumentationPage() {
               </section>
 
               {/* INTEGRATIONS */}
-              <section
-                id="integrations"
-                className="scroll-mt-28 py-12"
-              >
+              <section id="integrations" className="scroll-mt-28 py-12">
                 <p className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-600">
                   Integrations
                 </p>
@@ -579,7 +576,7 @@ export default function DocumentationPage() {
 
                 <div className="mt-10 grid gap-5 md:grid-cols-2">
                   {modules.map((module) => (
-                    <a
+                    <Link
                       key={module.title}
                       href={module.href}
                       className="rounded-2xl border border-slate-200 p-6 transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-lg"
@@ -595,16 +592,14 @@ export default function DocumentationPage() {
                       <span className="mt-5 inline-block text-sm font-semibold text-blue-600">
                         View section →
                       </span>
-                    </a>
+                    </Link>
                   ))}
                 </div>
               </section>
 
               {/* SUPPORT */}
               <section className="mt-6 rounded-3xl bg-slate-50 p-8">
-                <h3 className="text-2xl font-bold">
-                  Need help?
-                </h3>
+                <h3 className="text-2xl font-bold">Need help?</h3>
 
                 <p className="mt-3 max-w-2xl leading-7 text-slate-600">
                   If you need assistance understanding the platform or
@@ -612,12 +607,12 @@ export default function DocumentationPage() {
                   team can help.
                 </p>
 
-                <a
+                <Link
                   href="/support"
                   className="mt-6 inline-flex rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-blue-700"
                 >
                   Visit Support →
-                </a>
+                </Link>
               </section>
             </div>
           </div>

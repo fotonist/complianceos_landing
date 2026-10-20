@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ProductDetails from "./ProductDetails";
 import styles from "./CorporateLanding.module.css";
 
 export default function CorporateLanding({ locale = "en" }: { locale?: string }) {
@@ -61,7 +62,7 @@ export default function CorporateLanding({ locale = "en" }: { locale?: string })
           <p className={styles.eyebrow}>{copy.eyebrow}</p>
           <h1>{copy.title}</h1><p className={styles.intro}>{copy.intro}</p>
           <div className={styles.actions}><Link className={styles.primary} href={`${base}/demo`}>{copy.demo}<span aria-hidden="true">→</span></Link><a className={styles.secondary} href="#product">{copy.explore}<span aria-hidden="true">↓</span></a></div>
-          <figure className={styles.preview} id="product">
+          <figure className={styles.preview}>
             <div className={styles.previewBar}><span aria-hidden="true">● ● ●</span><span>Compliance Intelligence OS Pro</span><span aria-hidden="true">↗</span></div>
             <div className={styles.workflow}>
               <div className={styles.workflowTitle}>{tr ? "Uyumluluk çalışma alanınız" : "Your compliance workspace"}<small>{tr ? "Kapsamdan iyileştirmeye, bağlantılı bir yapı." : "A connected view, from scope to improvement."}</small></div>
@@ -71,6 +72,7 @@ export default function CorporateLanding({ locale = "en" }: { locale?: string })
             <figcaption>{copy.caption}</figcaption>
           </figure>
         </section>
+        <ProductDetails tr={tr} demoHref={`${base}/demo`} />
         <section id="solutions" className={styles.benefits}>
           <p className={styles.eyebrow}>{tr ? "TEK BİR ÇALIŞMA ALANI" : "ONE SHARED WORKSPACE"}</p><h2>{copy.heading}</h2><p>{copy.sub}</p>
           <div className={styles.cards}>{copy.cards.map(([title, text], i) => <article key={title}><span className={styles.number}>0{i + 1}</span><h3>{title}</h3><p>{text}</p></article>)}</div>

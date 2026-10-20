@@ -3,6 +3,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { X, ArrowRight } from "lucide-react";
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 
 interface DemoModalProps {
   open: boolean;
@@ -33,6 +34,19 @@ export default function DemoModal({
   open,
   onClose,
 }: DemoModalProps) {
+  const pathname = usePathname();
+  const tr = pathname === "/tr" || pathname?.startsWith("/tr/");
+  const t = tr ? {
+    title: "Demo Talep Et", description: "Standartlarınızı, risklerinizi, kanıtlarınızı ve iyileştirme çalışmalarınızı tek merkezden nasıl yönetebileceğinizi keşfedin.",
+    close: "Kapat", thanks: "Teşekkürler", received: "Demo talebiniz alındı.", followUp: "Ekibimiz sizinle iletişime geçecek.",
+    fullName: "Ad Soyad", businessEmail: "İş E-postası", company: "Şirket", jobTitle: "Görev / Unvan", companySize: "Çalışan Sayısı", country: "Ülke", message: "Uyumluluk hedeflerinizi bizimle paylaşın...", sending: "Gönderiliyor...", submit: "Demo Talep Et",
+    error: "Demo talebiniz gönderilemedi. Lütfen tekrar deneyin.", nameRequired: "Ad soyad zorunludur.", emailRequired: "İş e-postası zorunludur.", emailInvalid: "Lütfen geçerli bir iş e-postası girin.",
+  } : {
+    title: "Request a Demo", description: "Discover how to manage your standards, risks, evidence and improvement actions in one workspace.",
+    close: "Close", thanks: "Thank You", received: "Your demo request has been received.", followUp: "Our team will contact you.",
+    fullName: "Full Name", businessEmail: "Business Email", company: "Company", jobTitle: "Job Title", companySize: "Company Size", country: "Country", message: "Tell us about your compliance goals...", sending: "Sending...", submit: "Request Demo",
+    error: "Unable to submit demo request. Please try again.", nameRequired: "Full name is required.", emailRequired: "Business email is required.", emailInvalid: "Please provide a valid business email.",
+  };
   const [form, setForm] = useState<DemoForm>(initialForm);
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
@@ -103,7 +117,7 @@ export default function DemoModal({
 
       if (!response.ok || !data.success) {
         throw new Error(
-          data?.message || "Unable to submit demo request."
+          data?.message || t.error
         );
       }
 
@@ -111,11 +125,12 @@ export default function DemoModal({
     } catch (err) {
       console.error("Demo request failed:", err);
 
-      setError(
-        err instanceof Error
-          ? err.message
-          : "Unable to submit demo request. Please try again."
-      );
+      const validationErrors: Record<string, string> = {
+        "Full name is required.": t.nameRequired,
+        "Business email is required.": t.emailRequired,
+        "Please provide a valid business email.": t.emailInvalid,
+      };
+      setError(err instanceof Error ? validationErrors[err.message] || t.error : t.error);
     } finally {
       setLoading(false);
     }
@@ -155,6 +170,10 @@ export default function DemoModal({
             className="fixed left-1/2 top-1/2 z-[100] w-[92%] max-w-2xl -translate-x-1/2 -translate-y-1/2"
           >
             <div
+              role="dialog"
+              aria-modal="true"
+              aria-labelledby="demo-title"
+              lang={tr ? "tr" : "en"}
               className="max-h-[90vh] overflow-y-auto rounded-[32px] border border-white/20 bg-white/90 p-10 shadow-2xl backdrop-blur-2xl"
               onClick={(e) => e.stopPropagation()}
             >
@@ -164,14 +183,12 @@ export default function DemoModal({
                     ComplianceOS
                   </p>
 
-                  <h2 className="mt-3 text-4xl font-bold text-slate-900">
-                    Request a Demo
+                  <h2 id="demo-title" className="mt-3 text-4xl font-bold text-slate-900">
+                    {t.title}
                   </h2>
 
                   <p className="mt-4 max-w-lg text-slate-600">
-                    Discover how ComplianceOS helps enterprises
-                    centralize Governance, Risk, Compliance and
-                    Audit in one AI-powered platform.
+                    {t.description}
                   </p>
                 </div>
 
@@ -179,7 +196,7 @@ export default function DemoModal({
                   type="button"
                   onClick={onClose}
                   className="rounded-xl p-2 transition hover:bg-slate-100"
-                  aria-label="Close"
+                  aria-label={t.close}
                 >
                   <X size={20} />
                 </button>
@@ -192,13 +209,13 @@ export default function DemoModal({
                   </div>
 
                   <h3 className="text-2xl font-bold text-slate-900">
-                    Thank You
+                    {t.thanks}
                   </h3>
 
                   <p className="mt-4 text-slate-600">
-                    Your demo request has been received.
+                    {t.received}
                     <br />
-                    Our team will contact you within one business day.
+                    {t.followUp}
                   </p>
                 </div>
               ) : (
@@ -213,7 +230,8 @@ export default function DemoModal({
                       onChange={(e) =>
                         updateField("fullName", e.target.value)
                       }
-                      placeholder="Full Name"
+                      placeholder={t.fullName}
+                      aria-label={t.fullName}
                       className="rounded-2xl border border-slate-200 px-5 py-4 outline-none transition focus:border-blue-500"
                     />
 
@@ -227,7 +245,8 @@ export default function DemoModal({
                           e.target.value
                         )
                       }
-                      placeholder="Business Email"
+                      placeholder={t.businessEmail}
+                      aria-label={t.businessEmail}
                       className="rounded-2xl border border-slate-200 px-5 py-4 outline-none transition focus:border-blue-500"
                     />
 
@@ -236,7 +255,8 @@ export default function DemoModal({
                       onChange={(e) =>
                         updateField("company", e.target.value)
                       }
-                      placeholder="Company"
+                      placeholder={t.company}
+                      aria-label={t.company}
                       className="rounded-2xl border border-slate-200 px-5 py-4 outline-none transition focus:border-blue-500"
                     />
 
@@ -245,7 +265,8 @@ export default function DemoModal({
                       onChange={(e) =>
                         updateField("jobTitle", e.target.value)
                       }
-                      placeholder="Job Title"
+                      placeholder={t.jobTitle}
+                      aria-label={t.jobTitle}
                       className="rounded-2xl border border-slate-200 px-5 py-4 outline-none transition focus:border-blue-500"
                     />
 
@@ -257,7 +278,8 @@ export default function DemoModal({
                           e.target.value
                         )
                       }
-                      placeholder="Company Size"
+                      placeholder={t.companySize}
+                      aria-label={t.companySize}
                       className="rounded-2xl border border-slate-200 px-5 py-4 outline-none transition focus:border-blue-500"
                     />
 
@@ -266,7 +288,8 @@ export default function DemoModal({
                       onChange={(e) =>
                         updateField("country", e.target.value)
                       }
-                      placeholder="Country"
+                      placeholder={t.country}
+                      aria-label={t.country}
                       className="rounded-2xl border border-slate-200 px-5 py-4 outline-none transition focus:border-blue-500"
                     />
                   </div>
@@ -277,12 +300,13 @@ export default function DemoModal({
                     onChange={(e) =>
                       updateField("message", e.target.value)
                     }
-                    placeholder="Tell us about your compliance goals..."
+                    placeholder={t.message}
+                      aria-label={t.message}
                     className="rounded-2xl border border-slate-200 px-5 py-4 outline-none transition focus:border-blue-500"
                   />
 
                   {error && (
-                    <div className="rounded-2xl border border-red-200 bg-red-50 px-5 py-4 text-sm text-red-700">
+                    <div role="alert" className="rounded-2xl border border-red-200 bg-red-50 px-5 py-4 text-sm text-red-700">
                       {error}
                     </div>
                   )}
@@ -292,7 +316,7 @@ export default function DemoModal({
                     disabled={loading}
                     className="btn-primary mt-2 justify-center disabled:cursor-not-allowed disabled:opacity-60"
                   >
-                    {loading ? "Sending..." : "Request Demo"}
+                    {loading ? t.sending : t.submit}
 
                     <ArrowRight size={18} />
                   </button>

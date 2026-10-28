@@ -8,10 +8,10 @@ export default function CorporateLanding({ locale = "en" }: { locale?: string })
   const copy = tr ? {
     product: "Ürün", solutions: "Çözümler", contact: "İletişim", demo: "Demo Talep Et",
     eyebrow: "COMPLIANCE INTELLIGENCE OS PRO",
-    title: "Uyumluluk süreçlerinizi tek merkezden yönetin.",
-    intro: "Standartları, riskleri, kanıtları ve iyileştirme çalışmalarını birbirine bağlı bir yapıda yönetin. Ekibiniz için netlik, denetimleriniz için izlenebilirlik sağlayın.",
+    title: "GRC ve uyum yönetimi yazılımıyla süreçlerinizi tek merkezden yönetin.",
+    intro: "ComplianceOS; ISO 27001 uyum çalışmalarını, risk değerlendirmelerini, iç tetkikleri, kanıtları ve iyileştirme görevlerini tek bir GRC çalışma alanında ilişkilendirmenize yardımcı olur.",
     explore: "Ürünü keşfedin", caption: "Uyumluluk süreçlerinin şematik görünümü",
-    heading: "Birbiriyle bağlantılı süreçler. Daha net bir görünüm.",
+    heading: "Risk yönetimi, denetim hazırlığı ve uyum süreçleri tek çalışma alanında.",
     sub: "Dağınık kayıtları ortak bir çalışma alanında buluşturun.",
     cards: [
       ["Çoklu standart yönetimi", "Kontrol, gereksinim ve olgunluk temelli çerçeveleri kendi yapılarına uygun şekilde yönetin."],
@@ -25,10 +25,10 @@ export default function CorporateLanding({ locale = "en" }: { locale?: string })
   } : {
     product: "Product", solutions: "Solutions", contact: "Contact", demo: "Request a Demo",
     eyebrow: "COMPLIANCE INTELLIGENCE OS PRO",
-    title: "Bring your compliance work into focus.",
-    intro: "Connect standards, risks, evidence and improvement actions in one workspace. Give your team clarity and your audits a traceable foundation.",
+    title: "GRC and compliance management software for connected teams.",
+    intro: "ComplianceOS connects ISO 27001 compliance work, risk assessments, internal audits, evidence management and improvement actions in one GRC workspace.",
     explore: "Explore the product", caption: "Illustrative compliance workflow",
-    heading: "Connected processes. A clearer picture.", sub: "Bring scattered records together in a shared workspace.",
+    heading: "Risk management, audit readiness and compliance in one workspace.", sub: "Bring scattered records together in a shared workspace.",
     cards: [
       ["Multi-framework management", "Manage control, requirement and maturity based frameworks according to their own structures."],
       ["Traceable evidence", "Connect evidence to the work it supports and find the records you need when preparing for audits."],

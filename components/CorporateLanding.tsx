@@ -1,5 +1,6 @@
 import Link from "next/link";
 import ProductDetails from "./ProductDetails";
+import {capabilities, featurePath} from "@/lib/capabilities";
 import styles from "./CorporateLanding.module.css";
 
 export default function CorporateLanding({ locale = "en" }: { locale?: string }) {
@@ -73,6 +74,18 @@ export default function CorporateLanding({ locale = "en" }: { locale?: string })
           </figure>
         </section>
         <ProductDetails tr={tr} demoHref={`${base}/demo`} />
+        <section aria-labelledby="feature-pages-title" style={{maxWidth:1200,margin:"0 auto",padding:"65px 32px"}}>
+          <p className={styles.eyebrow}>{tr?"PLATFORM YETENEKLERİ":"PLATFORM CAPABILITIES"}</p>
+          <h2 id="feature-pages-title">{tr?"ComplianceOS Pro özelliklerini keşfedin":"Explore ComplianceOS Pro capabilities"}</h2>
+          <p style={{color:"#64748b",marginTop:16}}>{tr?"Her yeteneği kullanım senaryoları ve sağladığı faydalarla inceleyin.":"Explore each capability, its use cases and practical benefits."}</p>
+          <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(250px,1fr))",gap:16,marginTop:32}}>
+            {capabilities.map(item=><Link key={item.slug} href={featurePath(tr?"tr":"en",item.slug)} style={{display:"block",padding:24,border:"1px solid #dce3eb",borderRadius:7}}>
+              <h3 style={{fontSize:18,fontWeight:600}}>{item[tr?"tr":"en"].title}</h3>
+              <p style={{fontSize:13,color:"#64748b",lineHeight:1.7,marginTop:12}}>{item[tr?"tr":"en"].description}</p>
+              <span style={{display:"inline-block",marginTop:16,color:"#205db1",fontSize:13}}>{tr?"Detayları incele":"Learn more"} →</span>
+            </Link>)}
+          </div>
+        </section>
         <section id="solutions" className={styles.benefits}>
           <p className={styles.eyebrow}>{tr ? "TEK BİR ÇALIŞMA ALANI" : "ONE SHARED WORKSPACE"}</p><h2>{copy.heading}</h2><p>{copy.sub}</p>
           <div className={styles.cards}>{copy.cards.map(([title, text], i) => <article key={title}><span className={styles.number}>0{i + 1}</span><h3>{title}</h3><p>{text}</p></article>)}</div>

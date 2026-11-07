@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     template: "%s | Compliance Intelligence OS Pro",
   },
   description:
-    "AI-Powered Operating System for Governance, Risk, Compliance and Audit.",
+    "Enterprise GRC and compliance management platform connecting multiple standards, regulatory requirements, risks, controls, audits, evidence and maturity assessments.",
   applicationName: "Compliance Intelligence OS Pro",
   keywords: [
     "Compliance",

@@ -3,10 +3,10 @@ import { routing } from "./i18n/routing";
 
 export default createMiddleware(routing);
 
+// Explicit App Router feature routes are handled without locale middleware.
 export const config = {
   matcher: [
     "/",
-    "/(tr|en)/:path*",
-    "/((?!api|_next|.*\\..*).*)",
+    "/((?!api|_next|features(?:/|$)|(?:tr|en)/features(?:/|$)|.*\\..*).*)",
   ],
 };

@@ -10,7 +10,7 @@ export default function CorporateLanding({ locale = "en" }: { locale?: string })
     product: "Ürün", solutions: "Çözümler", contact: "İletişim", demo: "Demo Talep Et",
     eyebrow: "COMPLIANCE INTELLIGENCE OS PRO",
     title: "GRC ve uyum yönetimi yazılımıyla süreçlerinizi tek merkezden yönetin.",
-    intro: "ComplianceOS; ISO 27001 uyum çalışmalarını, risk değerlendirmelerini, iç tetkikleri, kanıtları ve iyileştirme görevlerini tek bir GRC çalışma alanında ilişkilendirmenize yardımcı olur.",
+    intro: "ComplianceOS Pro; uluslararası yönetim sistemi standartlarını, düzenleyici gereklilikleri, kurumsal riskleri, kontrolleri, denetimleri, kanıt yönetimini ve süreç olgunluğu değerlendirmelerini tek bir entegre platformda birleştirir. Uyum süreçlerinizi merkezi, izlenebilir ve ölçülebilir biçimde yönetin.",
     explore: "Ürünü keşfedin", caption: "Uyumluluk süreçlerinin şematik görünümü",
     heading: "Risk yönetimi, denetim hazırlığı ve uyum süreçleri tek çalışma alanında.",
     sub: "Dağınık kayıtları ortak bir çalışma alanında buluşturun.",
@@ -27,7 +27,7 @@ export default function CorporateLanding({ locale = "en" }: { locale?: string })
     product: "Product", solutions: "Solutions", contact: "Contact", demo: "Request a Demo",
     eyebrow: "COMPLIANCE INTELLIGENCE OS PRO",
     title: "GRC and compliance management software for connected teams.",
-    intro: "ComplianceOS connects ISO 27001 compliance work, risk assessments, internal audits, evidence management and improvement actions in one GRC workspace.",
+    intro: "ComplianceOS Pro brings management system standards, regulatory requirements, enterprise risks, controls, audits, evidence management and process maturity assessments together in one integrated platform. Manage compliance with greater visibility, traceability and measurable oversight.",
     explore: "Explore the product", caption: "Illustrative compliance workflow",
     heading: "Risk management, audit readiness and compliance in one workspace.", sub: "Bring scattered records together in a shared workspace.",
     cards: [
